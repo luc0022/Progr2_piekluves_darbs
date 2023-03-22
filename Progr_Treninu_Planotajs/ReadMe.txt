@@ -1,0 +1,1 @@
+Šo darbu veidoja Normunds Lucijanovs Jēkabpils Valsts ģimnāzija 12.a

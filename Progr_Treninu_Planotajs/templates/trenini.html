@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block quote %}
+<code style="float: left; color: aqua; font: Courier New; font-size: 30px; margin-top:60px; margin-left: 2%;">"No one knows what the future holds</code>
+<code style="float: left; color: aqua; font: Courier New; font-size: 30px; margin-top: 15px; margin-left: 40%;">Thats why it's potential is infinite"</code>
+{% endblock %}  
+
+
+<!--Faiā "layout.html" blokā "content" attēlo visus treninus no datubāzes-->
+{% block content %} 
+
+<div style="max-width:100%">
+{% for trenins in data %}
+        <div class="card" style="background-color: #25a5be;  width:40%;  margin:20px; float: left; min-height: 340px;">
+        <div class="card-body" style="margin: 5px; max-height: max-content;">
+            <h2 class="card-title">{{ trenins[1] }} {{ trenins[2] }}</h2>
+            <h2 class="card-title"> {{ trenins[3] }} </h2>
+             
+                {% for i in range(4,11) %}
+                    <h5 class="card-text">{{ trenins[i] }}<h5>
+                {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

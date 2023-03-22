@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+
+{% block quote %}
+<code style="float: right; color: aqua; font: Courier New; font-size: 50px; margin-top: 20%; margin-right: 2%;">Surpass your limits</code>
+<code style="float: right; color: aqua; font: Courier New; font-size: 50px; margin-top: 25%; margin-right: -35%;">right here, right now! </code>
+{% endblock %}  
+
+
+
+<!--Failam "layout.html" blokā "content" ievieto form kurā lietotājs spēs ievadīt datus-->
+
+{% block content %}
+<p style="margin: 5px; font: Courier New; color: #bee0ec;"> Ieteicams treniņus pievienot hronoloģiskā secībā!</p>
+
+<form action="/jauns_trenins" method="post" id="ievad_dati">    
+    <input class="form-control" name="datums" type="date" style="width: 20%" style="margin: 8px 0">
+    
+    <input class="form-control" name="diena" type="text"
+    placeholder="Ievadi dienu, piemēram, Pirmdiena" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="musk_grupa" type="text"
+    placeholder="Ievadi muskuļu grupu, piemēram, Chest/Tricep" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="vingrinajums_1" type="text"
+    placeholder="Ievadi vingrinājumus, piemēram, Squats - 20, 60, 80, 100KG x 10" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="vingrinajums_2" type="text" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="vingrinajums_3" type="text" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="vingrinajums_4" type="text" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="vingrinajums_5" type="text" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="vingrinajums_6" type="text" style="margin: 8px 0; width: 40%">
+    <input class="form-control" name="vingrinajums_7" type="text" style="margin: 8px 0; width: 40%">
+    <input type="submit" value="Pievienot treniņu" class="form-slelct">
+</form>
+
+{% endblock %}

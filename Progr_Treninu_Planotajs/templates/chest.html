@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+
+{% block quote %}
+<code style="float: left; color: aqua; font: Courier New; font-size: 30px; margin-top:60px; margin-left: 2%;">"You can't beat a mosnter</code>
+<code style="float: left; color: aqua; font: Courier New; font-size: 30px; margin-top: 15px; margin-left: 40%;">Without becoming one!"</code>
+{% endblock %}  
+
+
+
+{% block content %} 
+{% for trenins in data %}
+    {% if "Chest" in trenins[3] %} 
+        <div class="card" style="background-color: #25a5be ;  width:40% ;margin:20px; float: left; min-height: 340px;">
+            <div class="card-body">
+                
+                <h2 class="card-title">{{ trenins[1] }} {{ trenins[2] }}</h2>
+                <h2 class="card-title"> {{ trenins[3] }} </h2>
+                
+                    {% for i in range(4,11) %}
+                        <h5 class="card-text">{{ trenins[i] }}<h5>
+                    {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+{% endfor %}
+{% endblock %}
